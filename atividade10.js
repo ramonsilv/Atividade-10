@@ -17,7 +17,7 @@ class FormaPlana extends Forma {
     #comprimento
     constructor(altura, tipo, base, comprimento) {
         super(altura)
-        this.#tipo = tipo
+        this.#tipo = tipo.toLowerCase()
         this.#base = base
         this.#comprimento = comprimento
     }
@@ -26,7 +26,7 @@ class FormaPlana extends Forma {
         return this.#tipo
     }
     set tipo(novoTipo) {
-        this.#tipo = novoTipo
+        this.#tipo = novoTipo.toLowerCase()
     }
     
     get base() {
@@ -44,19 +44,25 @@ class FormaPlana extends Forma {
     }
 
     calcularArea(){
-        if(this.tipo === "retangular"){
-            return this.base * this.comprimento
-        } else if(this.tipo === "triangular") {
-            return(this.base * this.comprimento) / 2
+        if(this.tipo === "Retangular"){
+            return (this.base * this.comprimento).toFixed(2)
+        } else if(this.tipo === "Triangular") {
+            return((this.base * this.comprimento) / 2).toFixed(2)
+        } else {
+            console.error("Tipo de forma inválido. O tipo deve ser 'retangular' ou 'triangular'.")
+            return null
         }
     }
 
     calcularVolume(){
         let areaBase = this.calcularArea()
         if(this.tipo === "retangular") {
-            return areaBase * this.altura
+            return (areaBase * this.altura).toFixed(2)
         }else if(this.tipo === "triangular") {
-            return (areaBase * this.altura) / 3
+            return ((areaBase * this.altura) / 3).toFixed(2)
+        } else {
+            console.error("Tipo de forma inválido. O tipo deve ser 'retangular' ou 'triangular'.")
+            return null
         }
     }
 }
