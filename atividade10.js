@@ -107,3 +107,28 @@ class FormaCircular extends Forma {
         return (volume).toFixed(2)
     }
 }   //(EXERCICIO 5)
+
+//Instanciando objeto da classe mãe(Forma)
+const forma = new Forma(5)
+forma.calcularArea()//Saida: A função calcularArea da classe-mãe foi acessada.
+forma.calcularVolume()//Saida: A função calcularVolume da calsse-mãe foi acessada.
+
+//Instaciando objato da classe filha (FormaPlana)
+const formaPlana = new FormaPlana(3, "retangular", 4, 5)
+console.log(formaPlana.calcularArea())//Saida: 20.00
+console.log(formaPlana.calcularVolume())//Saida: 60.00
+
+//Instanciando objeto da outra classe filha (FormaCircular)
+const formaCircular = new FormaCircular(2, 3)
+console.log(formaCircular.calcularArea())//Saida: 28.27
+console.log(formaCircular.calcularVolumeCilindro())//Saida: 56.55
+console.log(formaCircular.calcularVolumeCone())//Saida: 18.85
+console.log(formaCircular.calcularVolumeEsfera())//Saida: 112.21
+//(EXERCICIO 6)
+
+//A razão pela qual a invocação do método calcularVolume por uma instância da classe FormaCircular produz a saída padrão da classe mãe (console.log("A função calcularVolume da classe-mãe foi acessada.");) é porque a classe FormaCircular é uma subclasse da classe mãe Forma.
+//Quando você cria uma subclasse, ela herda os métodos e propriedades da classe mãe. No entanto, se a subclasse tiver uma implementação própria para um método da classe mãe (com o mesmo nome), a implementação da subclasse é usada em vez da implementação da classe mãe.
+//No código fornecido, a classe FormaPlana sobrescreveu o método calcularVolume, fornecendo uma implementação específica para calcular o volume de formas planas retangulares e triangulares. No entanto, a classe FormaCircular não sobrescreveu o método calcularVolume, então a implementação da classe mãe é usada.
+//Como resultado, ao chamar o método calcularVolume em uma instância da classe FormaCircular, a implementação da classe mãe é executada, que é simplesmente imprimir a mensagem padrão "A função calcularVolume da classe-mãe foi acessada." no console.
+
+//(EXERCICIO 7)
