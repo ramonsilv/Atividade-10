@@ -127,8 +127,11 @@ console.log(formaCircular.calcularVolumeEsfera())//Saida: 112.21
 //(EXERCICIO 6)
 
 //A razão pela qual a invocação do método calcularVolume por uma instância da classe FormaCircular produz a saída padrão da classe mãe (console.log("A função calcularVolume da classe-mãe foi acessada.");) é porque a classe FormaCircular é uma subclasse da classe mãe Forma.
-//Quando você cria uma subclasse, ela herda os métodos e propriedades da classe mãe. No entanto, se a subclasse tiver uma implementação própria para um método da classe mãe (com o mesmo nome), a implementação da subclasse é usada em vez da implementação da classe mãe.
-//No código fornecido, a classe FormaPlana sobrescreveu o método calcularVolume, fornecendo uma implementação específica para calcular o volume de formas planas retangulares e triangulares. No entanto, a classe FormaCircular não sobrescreveu o método calcularVolume, então a implementação da classe mãe é usada.
+
+//Quando é criado uma subclasse, ela herda os métodos e propriedades da classe mãe. No entanto, se a subclasse tiver uma implementação própria para um método da classe mãe (com o mesmo nome), a implementação da subclasse é usada em vez da implementação da classe mãe.
+
+//No código em si, a classe FormaPlana sobrescreveu o método calcularVolume, fornecendo uma implementação específica para calcular o volume de formas planas retangulares e triangulares. No entanto, a classe FormaCircular não sobrescreveu o método calcularVolume, então a implementação da classe mãe é usada.
+
 //Como resultado, ao chamar o método calcularVolume em uma instância da classe FormaCircular, a implementação da classe mãe é executada, que é simplesmente imprimir a mensagem padrão "A função calcularVolume da classe-mãe foi acessada." no console.
 
 //(EXERCICIO 7)
