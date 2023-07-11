@@ -109,17 +109,17 @@ class FormaCircular extends Forma {
 }   //(EXERCICIO 5)
 
 //Instanciando objeto da classe mãe(Forma)
-const forma = new Forma(5)
+let forma = new Forma(5)
 forma.calcularArea()//Saida: A função calcularArea da classe-mãe foi acessada.
 forma.calcularVolume()//Saida: A função calcularVolume da calsse-mãe foi acessada.
 
 //Instaciando objato da classe filha (FormaPlana)
-const formaPlana = new FormaPlana(3, "retangular", 4, 5)
+let formaPlana = new FormaPlana(3, "retangular", 4, 5)
 console.log(formaPlana.calcularArea())//Saida: 20.00
 console.log(formaPlana.calcularVolume())//Saida: 60.00
 
 //Instanciando objeto da outra classe filha (FormaCircular)
-const formaCircular = new FormaCircular(2, 3)
+let formaCircular = new FormaCircular(2, 3)
 console.log(formaCircular.calcularArea())//Saida: 28.27
 console.log(formaCircular.calcularVolumeCilindro())//Saida: 56.55
 console.log(formaCircular.calcularVolumeCone())//Saida: 18.85
